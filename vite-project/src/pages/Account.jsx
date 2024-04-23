@@ -1,10 +1,23 @@
 import React from 'react'
+import SavedShows from '../components/SavedShows'
 
 const Account = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <div className='w-full text-white'>
+      <img
+        className="w-full h-[400px] object-cover"
+        src="https://www.teknofilo.com/wp-content/uploads/2021/06/Netflix-1000x563.jpg"
+        alt=""
+      />
+      <div className='w-full h-[550px] bg-black/60 fixed top-0 left-0 '>
+      <div className='absolute top-[20%] p-4 md:p-8'>
+      <h1 className='text-3xl md:text-5xl font-bold'>My Shows</h1>
+      </div>
+      </div>
+      </div>
+      <SavedShows />
+    </>
   )
 }
 
