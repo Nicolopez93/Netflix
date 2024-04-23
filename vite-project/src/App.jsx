@@ -6,7 +6,7 @@ import { AuthContextProvider } from './context/AuthContext';
 import Login from './pages/Login';
 import Singup from './pages/Singup';
 import Account from './pages/Account';
-
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/singup' element={<Singup />} />
-        <Route path='/account' element={<Account />} />
+        <Route path='/account' element={<ProtectedRoute> <Account /> </ProtectedRoute>} />
       </Routes>
     </AuthContextProvider>
     </>
